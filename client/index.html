@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Back End Assessment</title>
+  </head>
+  <body class="container">
+    <button id="complimentButton">Get a compliment</button>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+      document.createElement("complimentButton").onclick = function () {
+        axios.get("http://localhost:4000/api/compliment/")
+            
+    </script>
+  </body>
+  <body class="container">
+    <button id="fortunebutton">Get your fortune</button>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+      document.getElementById("fortunebutton").onclick = function () {
+        axios.get("http://localhost:4000/api/fortune/")
+        .then(function (response){
+          const data = response.data;
+          alert(data);
+        });
+      };
+    </script>
+
+    <body class="container">
+      <h1>Tell us all about your past lottery experiences in the box below!</h1>
+      <input type="text" id="lotteryexperience" name="lotteryexperience">
+      <button id="experiencebutton">POST YOUR EXPERIENCE</button>
+      <script>axios
+      </script> 
+    </body>
+  </body>
+</html>
